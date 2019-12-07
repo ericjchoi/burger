@@ -1,5 +1,5 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
-var devoured;    // defined as var in order to avoid undefined warning/error
+var devoured;    // defined as var without value in order to avoid undefined warning/error
 $(function () {
     // devouring burger
     $(".devourBtn_false").on("click", function (event) {
@@ -39,7 +39,7 @@ $(function () {
             location.reload();
         });
     });
-    // add or order a new burger
+    // add a new burger
     $("#submitBtn").on("click", function (event) {
         // Make sure to preventDefault on a submit event.
         event.preventDefault();
@@ -61,12 +61,11 @@ $(function () {
             }).catch(function (err) {
                 console.log('err', err);
             });
-        } else { 
+        } else {
             alert("Please Enter New Burger Name"); // alert when New Burger Name is empty
             location.reload();
         }
     });
-
 
     $(".deleteBtn").on("click", function (event) {
         event.preventDefault();
@@ -79,6 +78,4 @@ $(function () {
             url: "/api/burgers/" + id
         }).then(location.reload());
     });
-
-
 });

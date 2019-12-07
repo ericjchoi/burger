@@ -1,7 +1,6 @@
 // import mysql connection
 var connection = require("../config/connection.js");
 
-
 // helper function for sql syntax
 // array of ?, turns into a string
 function printQuestionMarks(num) {
@@ -34,7 +33,7 @@ function objToSql(ob) {
 }
 // ORM
 var orm = {
-    // display all burgers from table in burgers_db
+    // selecting all burgers from table in burgers_db
     selectAll: function (tableName, callback) {
         var queryString = "SELECT * FROM " + tableName + ";";
 
@@ -64,7 +63,7 @@ var orm = {
             callback(result);
         });
     },
-    // update table with devoured burger
+    // update table
     // an example of objColVals would be {burger_name: Yummy Burger, devoured: true}
     updateOne: function (tableName, objColVals, condition, callback) {
         var queryString = "UPDATE " + tableName;

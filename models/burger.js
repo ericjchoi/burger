@@ -2,7 +2,7 @@
 var orm = require("../config/orm.js");
 
 var burger = {
-    // display all burgers from table in burgers_db
+    // select all burgers from table in burgers_db
     selectAll: function (callback) {
         orm.selectAll("burgers", function (res) {
             callback(res);
@@ -14,15 +14,15 @@ var burger = {
             callback(res);
         });
     },
-    // update table with devoured burger
+    // update table with changed burger information
     updateOne: function (objColVals, condition, callback) {
         orm.updateOne("burgers", objColVals, condition, function (res) {
             callback(res);
         });
     },
     // delete clicked burger from burgers_db.
-    deleteOne: function(condition, callback) {
-        orm.deleteOne("burgers", condition, function(res) {
+    deleteOne: function (condition, callback) {
+        orm.deleteOne("burgers", condition, function (res) {
             callback(res);
         });
     }

@@ -8,9 +8,7 @@
         <h1>Eat da Burger!</h1>
         <hr>
       </div>
-
       <h2>Burgers ready for you to devour !!</h2>
-
       <ul>
         {{#each burgers}}
         {{#unless devoured}}
@@ -18,9 +16,8 @@
         {{/unless}}
         {{/each}}
       </ul>
-<hr>
+      <hr>
       <h2>Burgers that have been devoured already !!</h2>
-
       <ul>
         {{#each burgers}}
         {{#if devoured}}
@@ -35,9 +32,7 @@
           <div class="form-group">
             <label for="new_burger">Enter Burger Name:</label>
             <input type="text" id="new_burger" name="name" style="width:45%;">&nbsp;&nbsp;<button type="submit"
-              id="submitBtn">Order
-              New
-              Burger</button><br><br>
+              id="submitBtn">Order New Burger</button><br><br>
           </div>
           <div class="form-group">
           </div>
