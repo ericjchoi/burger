@@ -1,37 +1,49 @@
-<div id="logo">
-  <img src="/assets/img/wimpy_burger.png" style="width: 100px;">
-  <h1>Eat da Burger!</h1>
+<div class="outside">
+  <br>
+  <div class="mainContainer">
+    <div class="innerContainer">
+      <div id="logo">
+        <br>
+        <img src="/assets/img/wimpy_burger.png" style="width: 100px;">
+        <h1>Eat da Burger!</h1>
+        <hr>
+      </div>
+
+      <h2>Burgers ready for you to devour !!</h2>
+
+      <ul>
+        {{#each burgers}}
+        {{#unless devoured}}
+        {{> hamburgers/hamburger-block devoured=false}}
+        {{/unless}}
+        {{/each}}
+      </ul>
+<hr>
+      <h2>Burgers that have been devoured already !!</h2>
+
+      <ul>
+        {{#each burgers}}
+        {{#if devoured}}
+        {{> hamburgers/hamburger-block devoured=true}}
+        {{/if}}
+        {{/each}}
+      </ul>
+      <hr>
+      <h2>Order a new Burger !!</h2>
+      <ul>
+        <form class="create-form">
+          <div class="form-group">
+            <label for="new_burger">Enter Burger Name:</label>
+            <input type="text" id="new_burger" name="name" style="width:45%;">&nbsp;&nbsp;<button type="submit"
+              id="submitBtn">Order
+              New
+              Burger</button><br><br>
+          </div>
+          <div class="form-group">
+          </div>
+        </form>
+      </ul>
+    </div>
+  </div>
+  <br>
 </div>
-
-<h2>Burgers ready for you to devour !!</h2>
-
-<ul>
-  {{#each burgers}}
-  {{#unless devoured}}
-  {{> hamburgers/hamburger-block devoured=false}}
-  {{/unless}}
-  {{/each}}
-</ul>
-
-<h2>Burgers that devoured already. You can re-order !!</h2>
-
-<ul>
-  {{#each burgers}}
-  {{#if devoured}}
-  {{> hamburgers/hamburger-block devoured=true}}
-  {{/if}}
-  {{/each}}
-</ul>
-
-<h2>Order a new Burger !!</h2>
-<ul>
-  <form class="create-form">
-    <div class="form-group">
-      <label for="new_burger">Enter Burger Name:</label>
-      <input type="text" id="new_burger" name="name" style="width:50%;"><button type="submit" id="submitBtn">Order New Burger</button>
-    </div>
-    <div class="form-group">
-    </div>
-  </form>
-</ul>
-<br><br>

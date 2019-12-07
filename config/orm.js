@@ -81,6 +81,20 @@ var orm = {
             }
             callback(result);
         });
+    },
+    // delete clicked burger from the burgers_db.
+    deleteOne: function (tableName, condition, callback) {
+        var queryString = "DELETE FROM " + tableName;
+        queryString += " WHERE ";
+        queryString += condition;
+
+        console.log(queryString);
+        connection.query(queryString, function (err, result) {
+            if (err) {
+                throw err
+            }
+            callback(result);
+        });
     }
 };
 

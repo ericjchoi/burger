@@ -1,38 +1,51 @@
 # burger
 ### Eat-Da-Burger
 
-This app is going to add and update buger data in MySQL database using Node, Express, MySQL, Handlebars and ORM.
-
-### Current progress
+This app is going to add, update and delete burger data in `MySQL` database and display result in the browser using `Node`, `Express`, `MySQL`, `Handlebars` and `ORM`.
 
 * Completed
   * GitHub repository
-  * .gitignore file 
-  * file directories
-  * data file
+  * file directories and files with MVC structure
   * npm init
   * npm installation packages
-  * MVC structure
-  * prepopulation of burger data using schema.sql and seeds.sql from command line
-  * `devour` and `Re-Order` button function
-  * app running screenshots (showing current progress)
+  * prepopulation of burger data using `schema.sql` and `seeds.sql` from command line
+  * Button functions including
+    * `Devour !!`
+    * `Re-Order`
+    * `Delete`
+    * `Order New Burger`
+  * app running screenshots
+  * Heroku deployment link
 
 * Further development
-  * web browser reload needs to be done manually.
-  * New burger addition to MySQL database and updating web browser is not completed yet.
-  * deploy to heroku with the final version
-  * add heroku deployed link in README.md file
+  * Adding validation for checking duplicated burger name input. Currently the duplicated burger name can be added with different id.
 
-* App running screenshots
+### App running screenshots
+![figure1](./public/assets/img/screenshot1.jpg)
+Figure 1. Initial loading of the app. Burger names are pre-populated with `schema.sql` and `seeds.sql` from command line. The ids are auto-incremantally generated.
 
-![figure1](./public/assets/img/screenshot01.jpg)
-Figure 1. Initial loading of the app. Burger names and ids are pre-populated with schema.sql and seeds.sql from command line.
+![figure2](./public/assets/img/screenshot2.jpg)
+Figure 2. When user clicked `devour` button of burger id 2. Ultimate Cheese Burger. The id and burger name moved down to the devoured list, and its devoured status updated as true in MySQL database so that the user can re-order.
 
-![figure2](./public/assets/img/screenshot02.jpg)
-Figure 2. When user clicked `devour` button of burger id 1. House Special Burger. The id and burger name moved to devoured list and its devoured status updated as true in MySQL database.
+![figure3](./public/assets/img/screenshot3.jpg)
+Figure 3. When user clicked `Re-Order` button of burger id 3. Totally Veggie Burger. The id and burger name moved up to ready for devoured list, and its devoured status updated as false in MySQL database so that the user can devour.
 
-![figure3](./public/assets/img/screenshot03.jpg)
-Figure 3. When use clicked `Re-Order` button of burger id 7.  Totally Veggie Burger. The id and burger name moved to ready for devoured list and its devoured status updated as false in MySQL database.
+![figure4](./public/assets/img/screenshot4.jpg)
+Figure 4. User entered new burger name "Seattle's Best Burger" in the textbox and about to click `Order New Burger` button.
+
+![figure5](./public/assets/img/screenshot5.jpg)
+Figure 5. After user clicked `Order New Burger` button, the new burger "Seattle's Best Burger" is stored in the ready for devoured list with newly generated id 4. Its devoured status is set as false so that the user can devour.
+
+
+![figure6](./public/assets/img/screenshot6.jpg)
+Figure 6. When user clicked `Delete` button of burger id 1. House Special Burger. The id and burger name has been deleted from ready for devoured list.
+
+
+![figure7](./public/assets/img/screenshot7.jpg)
+Figure 7. `Delete` button also works for the burger listed in the already devoured list. "Ultimate Cheese Burger" of id 2 has been deleted after click the `Delete` button.
+
+![figure8](./public/assets/img/screenshot8.jpg)
+Figure 8. Alert popped up when the user clicked `Order New Burger` button without entering new burger name. User can resume using the app after click `OK` in the alert.
 
 ### Run app on Heroku
 The link will be provided when the app is fully working and deployed.

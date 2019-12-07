@@ -19,6 +19,12 @@ var burger = {
         orm.updateOne("burgers", objColVals, condition, function (res) {
             callback(res);
         });
+    },
+    // delete clicked burger from burgers_db.
+    deleteOne: function(condition, callback) {
+        orm.deleteOne("burgers", condition, function(res) {
+            callback(res);
+        });
     }
 };
 

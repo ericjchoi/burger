@@ -1,6 +1,40 @@
+.outside {
+    background-color: rgb(255, 162, 0);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.mainContainer {
+    margin: 0 10%;
+    background-color: rgb(255, 255, 255);
+}
+.innerContainer {
+    margin: 20px;
+}
 #logo {
     text-align: center;
 }
-.devourBtn {
+.devourBtn_false {
+    font-size: 15px;;
     border-radius: 5px;
+    background-color: rgb(127, 225, 127);
+}
+.devourBtn_true {
+    font-size: 15px;;
+    border-radius: 5px;
+    background-color: rgb(255, 172, 40);
+}
+.deleteBtn {
+    font-size: 15px;;
+    border-radius: 5px;
+    background-color: rgb(213, 35, 4);
+    color: rgb(254, 244, 244);
+}
+#submitBtn {
+    font-size: 15px;;
+    border-radius: 5px;
+    background-color: rgb(2, 116, 238);
+    color: rgb(254, 244, 244);
+}
+#new_burger {
+    background-color: rgb(255, 162, 0);
+    font-size: 20px;
 }
