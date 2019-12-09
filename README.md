@@ -15,9 +15,9 @@ This app is going to add, update and delete burger data in `MySQL` database and 
     * `Delete`
     * `Order New Burger`
   * app running screenshots
+  * Heroku deployment link
 
 * Further development
-  * Heroku deployment link
   * Adding validation for checking duplicated burger name input. Currently the duplicated burger name can be added with different primary key (id).
 
 ### App running screenshots
@@ -47,5 +47,4 @@ Figure 7. `Delete` button also works for the burger listed in the already devour
 ![figure8](./public/assets/img/screenshot8.jpg)
 Figure 8. Alert popped up when the user clicked `Order New Burger` button without entering new burger name. User can resume using the app after click `OK` in the alert.
 
-### Run app on Heroku
-The link will be provided when the app is deployed in Heroku.
+### [Run app on Heroku](https://aqueous-tundra-65909.herokuapp.com/)
