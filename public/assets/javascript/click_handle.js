@@ -10,7 +10,7 @@ $(function () {
             devoured: 1 // true also works
         };
 
-        // Send the PUT request. ajax update
+        // Send the PUT request. Ajax update
         $.ajax("/api/burgers/" + id, {
             type: "PUT",
             data: devouredStatus
@@ -26,10 +26,10 @@ $(function () {
         var id = $(this).data("id");
 
         var devouredStatus = {
-            devoured: 0 // false also works
+            devoured: 0 // 0 and false both works
         };
 
-        // Send the PUT request. ajax update
+        // Send the PUT request. Ajax update
         $.ajax("/api/burgers/" + id, {
             type: "PUT",
             data: devouredStatus
@@ -48,7 +48,7 @@ $(function () {
             burger_name: $("#new_burger").val().trim(),
             devoured: 0 // false causes error
         };
-        // new burger name validation. add new burger into database unless its name is empty
+        // new burger name validation. add new burger into database unless its name is empty.
         if ($("#new_burger").val().trim() !== "") {
             // Send the POST request.
             $.ajax("/api/burgers/", {
@@ -56,13 +56,13 @@ $(function () {
                 data: newBurger
             }).then(function () {
                 console.log("new burger added");
-                // Reload the page to get the updated list
+                // Reload the page to get the updated list.
                 location.reload();
             }).catch(function (err) {
                 console.log('err', err);
             });
         } else {
-            alert("Please Enter New Burger Name"); // alert when New Burger Name is empty
+            alert("Please Enter New Burger Name"); // alert when New Burger Name is empty.
             location.reload();
         }
     });
