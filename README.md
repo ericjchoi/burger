@@ -1,7 +1,7 @@
 # burger
 ### Eat-Da-Burger
 
-This app is going to add, update and delete burger data in `MySQL` database and display result in the browser using `Node`, `Express`, `MySQL`, `Handlebars` and `ORM`.
+This app is going to add, update and delete burger data in `MySQL` database and displays results in the browser using `Node.js`, `Express.js`, `MySQL` and `Handlebars`.
 
 * Completed
   * GitHub repository
