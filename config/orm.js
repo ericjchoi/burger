@@ -1,7 +1,7 @@
-// import mysql connection
+// Import MySQL connection
 var connection = require("../config/connection.js");
 
-// helper function for sql syntax
+// Helper function for MySQL syntax
 // array of ?, turns into a string
 function printQuestionMarks(num) {
     var arr = [];
@@ -11,7 +11,7 @@ function printQuestionMarks(num) {
     return arr.toString();
 }
 
-// helper function to convert object key/value pairs to sql syntax
+// Helper function to convert object key/value pairs to MySQL syntax
 function objToSql(ob) {
     var arr = [];
     // loop through the keys and push the key/value as a string int arr
@@ -33,7 +33,7 @@ function objToSql(ob) {
 }
 // ORM
 var orm = {
-    // selecting all burgers from table in burgers_db
+    // Selecting all burgers from table in burgers_db
     selectAll: function (tableName, callback) {
         var queryString = "SELECT * FROM " + tableName + ";";
 
@@ -44,7 +44,7 @@ var orm = {
             callback(result);
         });
     },
-    // add one burger into table in burgers_db
+    // Add one burger into table in burgers_db
     insertOne: function (tableName, cols, vals, callback) {
         var queryString = "INSERT INTO " + tableName;
 
@@ -63,7 +63,7 @@ var orm = {
             callback(result);
         });
     },
-    // update table
+    // Update table
     // an example of objColVals would be {burger_name: Yummy Burger, devoured: true}
     updateOne: function (tableName, objColVals, condition, callback) {
         var queryString = "UPDATE " + tableName;
@@ -81,7 +81,7 @@ var orm = {
             callback(result);
         });
     },
-    // delete clicked burger from the burgers_db.
+    // Delete clicked burger from the burgers_db.
     deleteOne: function (tableName, condition, callback) {
         var queryString = "DELETE FROM " + tableName;
         queryString += " WHERE ";
@@ -97,5 +97,5 @@ var orm = {
     }
 };
 
-// export the orm object for the model burger.js
+// Export the orm object for the model burger.js
 module.exports = orm;
