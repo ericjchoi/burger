@@ -1,11 +1,11 @@
-// in order to use .env
+// In order to use .env
 require("dotenv").config();
 
 // require mysql
 var mysql = require("mysql");
 var connection;
 
-// set up connection information
+// Set up connection information
 if (process.env.JAWSDB_URL) {
     connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
@@ -18,7 +18,7 @@ if (process.env.JAWSDB_URL) {
     });
 };
 
-// connect to database
+// Connect to database
 connection.connect(function (err) {
     if (err) {
         console.error("Error connecting: " + err.stack);
@@ -27,5 +27,5 @@ connection.connect(function (err) {
     console.log("Connected as id " + connection.threadId);
 });
 
-// export connection
+// Export connection
 module.exports = connection;
