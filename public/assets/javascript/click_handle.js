@@ -1,7 +1,7 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 var devoured;    // defined as var without value in order to avoid undefined warning/error
 $(function () {
-    // devouring burger
+    // Devouring burger
     $(".devourBtn_false").on("click", function (event) {
         event.preventDefault();
         var id = $(this).data("id");
@@ -20,7 +20,7 @@ $(function () {
             location.reload();
         });
     });
-    // re-ordering the burger
+    // Re-ordering the burger
     $(".devourBtn_true").on("click", function (event) {
         event.preventDefault();
         var id = $(this).data("id");
@@ -39,7 +39,7 @@ $(function () {
             location.reload();
         });
     });
-    // add a new burger
+    // Add a new burger
     $("#submitBtn").on("click", function (event) {
         // Make sure to preventDefault on a submit event.
         event.preventDefault();
@@ -48,7 +48,7 @@ $(function () {
             burger_name: $("#new_burger").val().trim(),
             devoured: 0 // false causes error
         };
-        // new burger name validation. add new burger into database unless its name is empty.
+        // New burger name validation. Add new burger into database unless its name is empty.
         if ($("#new_burger").val().trim() !== "") {
             // Send the POST request.
             $.ajax("/api/burgers/", {
@@ -62,11 +62,12 @@ $(function () {
                 console.log('err', err);
             });
         } else {
-            alert("Please Enter New Burger Name"); // alert when New Burger Name is empty.
+            alert("Please Enter New Burger Name"); // Alert when New Burger Name is empty.
             location.reload();
         }
     });
 
+    // When delete button clicked
     $(".deleteBtn").on("click", function (event) {
         event.preventDefault();
 
