@@ -1,5 +1,5 @@
 # burger
-### Eat-Da-Burger
+## Eat-Da-Burger
 
 This app is going to add, update and delete burger data in `MySQL` database and displays results in the browser using `Node.js`, `Express.js`, `MySQL` and `Handlebars`.
 
@@ -7,15 +7,15 @@ This app is going to add, update and delete burger data in `MySQL` database and 
   * GitHub repository
   * file directories and files with MVC structure
   * npm init
-  * npm installation packages
-  * prepopulation of burger data using `schema.sql` and `seeds.sql` from command line
+  * npm packages installed
+  * pre-population of burger data using `schema.sql` and `seeds.sql` from command line
   * Button functions including
     * `Devour !!`
     * `Re-Order`
     * `Delete`
     * `Order New Burger`
-  * app running screenshots
-  * Heroku deployment link
+  * app running screenshots added to README.md
+  * Deployed to Heroku
 
 * Further development
   * Adding validation for checking duplicated burger name input. Currently the duplicated burger name can be added with different primary key (id).
